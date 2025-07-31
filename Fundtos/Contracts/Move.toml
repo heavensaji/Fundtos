@@ -1,0 +1,19 @@
+[package]
+name = "Fundraising"
+version = "1.0.0"
+authors = []
+license = "Apache-2.0"
+
+[addresses]
+Fundraising = "0xf52a437aeb67ea4b91f1221ce7a65cac382de5e2956f1be2344a88d4ccdad5b6"
+DevAddress = "0xf52a437aeb67ea4b91f1221ce7a65cac382de5e2956f1be2344a88d4ccdad5b6"
+std = "0x1"
+aptos_framework = "0x1"
+
+
+[dependencies]
+AptosFramework = { local = "" } //localfile path
+AptosStdlib = { local = "" }  //localfile path
+
+
+[dev-dependencies]

@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", serif;
+
+}
+/* .connectwallet{
+    background-color: rgb(255, 166, 166);
+    padding: 0 20px;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+.card{
+    background-color: rgb(255, 146, 146);
+    padding: 20px;
+    width: 400px;
+}
+.head{
+    color: white;
+    font-size: 25px;
+}
+.description{
+    font-size: 20px;
+    color: white;
+    padding: 10px 0;
+}
+.goal{
+    color: red;
+    padding: 10px 0;
+}
+.filled{
+    color: green;
+    padding: 10px 0;
+}
+.status{
+    color: green;
+    padding: 10px 0;
+}
+h1{
+    text-align: center;
+    margin: 20px;
+}
+
+.grid{
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    grid-template-columns: auto auto auto;
+}
+input{
+    height: 4vh;
+    border: none;
+    border-radius: 2px;
+    padding: 0 10px;
+}
+button{
+    height: 4vh;
+    border: none;
+    border-radius: 2px;
+    background: green;
+    color: white;
+    text-align: center;
+    margin: 10px;
+    padding: 0 10px;
+    
+}

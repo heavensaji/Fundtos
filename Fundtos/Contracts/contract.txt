@@ -1,0 +1,55 @@
+0x04da2f94e9e011556d08eb1aae290c63c8c82b76fbe90746234565e5a74d0140::Fundraising
+
+
+
+
+jeevagan@JEEVAGANs-MacBook-Air Defy25 % aptos move compile
+Compiling, may take a little while to download git dependencies...
+INCLUDING DEPENDENCY AptosFramework
+INCLUDING DEPENDENCY AptosStdlib
+INCLUDING DEPENDENCY MoveStdlib
+BUILDING Fundraising
+{
+  "Result": [
+    "2507c7a27aa31b47f7adf73d137385e8919cdfef01423e137c899138ba595a9d::Fundraising"
+  ]
+}
+jeevagan@JEEVAGANs-MacBook-Air Defy25 % aptos move publish
+Compiling, may take a little while to download git dependencies...
+INCLUDING DEPENDENCY AptosFramework
+INCLUDING DEPENDENCY AptosStdlib
+INCLUDING DEPENDENCY MoveStdlib
+BUILDING Fundraising
+package size 4800 bytes
+Do you want to submit a transaction for a range of [283100 - 424600] Octas at a gas unit price of 100 Octas? [yes/no] >
+yes
+Transaction submitted: https://explorer.aptoslabs.com/txn/0x0f05aa465c3145c7174bd281de54cef69d5cc6d18c5c8c27a28f5e8738af77bc?network=devnet
+{
+  "Result": {
+    "transaction_hash": "0x0f05aa465c3145c7174bd281de54cef69d5cc6d18c5c8c27a28f5e8738af77bc",
+    "gas_used": 2831,
+    "gas_unit_price": 100,
+    "sender": "2507c7a27aa31b47f7adf73d137385e8919cdfef01423e137c899138ba595a9d",
+    "sequence_number": 0,
+    "success": true,
+    "timestamp_us": 1736494040427588,
+    "version": 471900113,
+    "vm_status": "Executed successfully"
+  }
+}
+
+
+
+
+aptos move run \
+  --function-id "0x2507c7a27aa31b47f7adf73d137385e8919cdfef01423e137c899138ba595a9d::Fundraising::create_campaign" \
+  --args string:"Fund for heart patients" string:"Donate funds to heart patients to get right treatment" u64:10000
+
+
+
+aptos move run \
+  --function-id "0xf52a437aeb67ea4b91f1221ce7a65cac382de5e2956f1be2344a88d4ccdad5b6::Fundraising::initialize_platform_fees"
+
+aptos move run \
+  --function-id "0xf52a437aeb67ea4b91f1221ce7a65cac382de5e2956f1be2344a88d4ccdad5b6::Fundraising::initialize_global_registry" \
+  --profile default
